@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #b0aee8, #c288e1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    text-align: center;
+    color: #2c2049;
+}
+
+
+.logo {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+   
+}
+
+p {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 25px;
+    color: #3a2f58;
+}
+
+.imagem {
+    width: 200px;
+    margin-top: 20px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #4b2f82;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    padding: 12px 40px;
+    border-radius: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.botao:hover {
+    background-color: #5c3f99;
+}

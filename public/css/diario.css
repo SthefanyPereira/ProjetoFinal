@@ -1,0 +1,266 @@
+:root{
+--bg1: #f5f5f5;
+--bg2: #e6e6e6;
+--accent: #48bb85;
+--card: #e77c7c;
+--muted: #000000;
+--success: #13e46e;
+--danger: #ff5c7a;
+--soft: rgba(47, 226, 101, 0.918);
+--shadow: 0 8px 20px rgba(20,20,30,0.12);
+--radius-lg: 29px;
+--radius-md: 15px;
+}
+
+
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+background: linear-gradient(180deg,var(--bg1),var(--bg2));
+-webkit-font-smoothing:antialiased;
+color:#111;
+min-height:100vh;
+padding:0;
+}
+
+.screen{
+width: 90%;
+max-width: 1200px; 
+margin: 0 auto;
+background: transparent;
+border-radius:0; 
+box-shadow: none;
+overflow:visible;
+}
+
+header{
+background: linear-gradient(to bottom, #b0aee8, #c288e1);
+padding:22px 18px;
+color:#111;
+font-weight:800;
+font-size:26px;
+font-family: 'Quicksand', 'Nunito', sans-serif;
+border-bottom-left-radius:var(--radius-lg);
+border-bottom-right-radius:var(--radius-lg);
+width: 100%; 
+}
+.header-wrapper {
+background:linear-gradient(to bottom, #b0aee8, #c288e1);
+width: 100%;
+margin-bottom: 20px;
+}
+.screen header {
+background: none;
+max-width: 1200px; 
+margin: 0 auto;
+}
+
+
+main{padding:18px 0;}
+
+
+
+.chart-wrap {
+padding: 5px;
+}
+
+.chart-wrap svg {
+height: 110px; 
+width: 50%;
+display: block; 
+
+
+
+
+.btn-primary, .cta button, .pro-card .join {
+background: var(--accent);
+color: #ffffff;
+font-weight: 700;
+cursor: pointer;
+border: none;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+
+padding: 12px 18px;
+border-radius: var(--radius-md); 
+}
+
+
+.cta button {
+margin-left: auto;
+padding: 10px 14px; 
+}
+
+.pro-card .join {
+padding: 10px 12px; 
+}
+}
+.top-row{
+display:flex;
+gap:20px; 
+flex-wrap: wrap;
+margin-bottom: 20px;
+}
+
+.progress-card{
+flex: 3; 
+min-width: 300px; 
+
+
+
+background: #ffffff;
+padding: 15px 18px;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.progress-metrics-wrapper {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 15px;
+min-width: 200px; 
+}
+
+
+.mini-card{
+width: 100%;
+background:  linear-gradient(to bottom, #b0aee8, #c288e1);
+padding:20px;
+
+border: 2px solid var linear-gradient(to bottom, #b0aee8, #c288e1);
+
+border-radius:12px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:6px;
+box-shadow:0 6px 18px rgba(10,10,20,0.05);
+}
+
+.mini-card .num{
+font-weight:800;
+font-size:24px; 
+color: var #ffffff;
+}
+
+.mini-card small{
+color:varm #ffffff; 
+text-align: center;
+}
+
+
+.mini-card{
+    width: 100%; /* Ocupa a largura total do seu wrapper */
+    padding:20px; /* Aumenta o padding */
+}
+
+.pro-card {
+    background: #ffffff; /* Fundo branco sólido */
+    padding: 20px 20px; /* Espaço interno */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* Sombra para destaque */
+    margin-bottom: 25px; /* Espaço para separá-lo dos logs abaixo */
+}
+
+
+
+/* ========================================================= */
+/* 5. REGISTROS ANTERIORES - AJUSTE PARA TELA INTEIRA */
+/* ========================================================= */
+
+.log {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 2 ou 3 colunas em tela grande */
+    gap: 20px;
+}
+
+
+/* ESTILO DA CAIXA DE CADA REGISTRO (o novo "cartão" de linha inteira) */
+.entry {
+    background: #ffffff; /* Fundo branco para a caixa inteira */
+    padding: 15px; /* Espaço em volta do conteúdo */
+    border-radius: 12px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    display: flex; /* Para alinhar o ponto de cor à esquerda */
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.entry .dot {
+    /* Mantenha o estilo do ponto ou bolinha de cor */
+    flex-shrink: 0;
+    width: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    text-align: center;
+    line-height: 30px;
+}
+
+.entry .text {
+    /* Garante que o texto ocupe o restante do espaço */
+    flex-grow: 1;
+}
+
+
+
+/* ========================================================= */
+/* 6. BARRA DE NAVEGAÇÃO - TRANSFORMADA EM BARRA SUPERIOR DE DESKTOP */
+/* ========================================================= */
+
+nav.bottom{
+    /* ESTILOS DE BARRA DE DESKTOP/NAVBAR */
+    position: static; /* Não fica fixa no rodapé */
+    margin-top:0;
+    padding: 10px 0;
+    background: #fff; /* Fundo sólido para barra */
+    display:flex;
+    justify-content:flex-end; /* Move itens para a direita */
+    gap: 20px;
+    border-radius:0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-top: none;
+    border-bottom: 1px solid #bbbbbb;
+}
+
+nav.bottom .item{
+    flex: unset; /* Remove flex, usa gap para espaçamento */
+    text-align:center;
+    font-size:14px;
+    color:var(--muted);
+    padding: 5px 10px;
+}
+nav.bottom .item:nth-child(2) {
+    color: var(--accent);
+    font-weight: 800;
+    border-bottom: 3px solid var(--accent); /* Indicador de página ativa */
+}
+
+
+/* ========================================================= */
+/* 7. RESPONSIVIDADE - AJUSTES ADICIONAIS */
+/* ========================================================= */
+
+@media (max-width: 600px){
+    /* Retorna ao modo de coluna única em telas pequenas */
+    .top-row {
+        flex-direction: column;
+    }
+    .progress-card {
+        min-width: unset;
+    }
+    .progress-metrics-wrapper {
+        flex-direction: row; /* Mantém as mini-cards lado a lado */
+        min-width: unset;
+    }
+    .mini-card {
+        flex: 1;
+        width: 50%;
+    }
+    .log {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,181 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* ===== HEADER AJUSTADO ===== */
+header {
+  background: linear-gradient(to bottom, #b0aee8, #c288e1);
+  color: black;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+
+.header-text p {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+}
+
+/* ===== MENU NAV DIREITO ===== */
+nav.bottom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+nav.bottom .item {
+  font-weight: 500;
+  color: black;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav.bottom .item:hover {
+  background: #b0aee8;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+
+
+/* ===== MAIN CONTAINER ===== */
+main {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-left: 5px solid #dfd5ff;
+}
+
+/* ===== TERAPEUTAS ===== */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background: #f3f1ff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card h3 { margin-top: 0; color: black; }
+
+.card button {
+  background: #b0aee8;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.card button:hover {
+  background: #b0aee8;
+}
+
+/* ===== CONSULTAS ===== */
+.consultas table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.consultas th, .consultas td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #f3f1ff;
+  text-align: left;
+}
+.consultas th {
+  background: #c288e1;
+  color: #fff;
+}
+.consultas tr:nth-child(even) {
+  background: #f3f1ff;
+}
+.consultas .status {
+  background: #b0aee8;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+}
+.consultas .vazio {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* ===== PROGRESSO ===== */
+.progresso {
+  background: linear-gradient(180deg, #fff, #fff4f2);
+  border-left: 5px solid #b0aee8;
+}
+
+.progresso p {
+  color: #444;
+  font-weight: 500;
+}
+
+.progresso .barra {
+  background: #f0d3cd;
+  border-radius: 20px;
+  height: 15px;
+  margin-top: 10px;
+}
+.preenchimento {
+  background: linear-gradient(90deg, #b0aee8, #c288e1);
+  height: 15px;
+  border-radius: 20px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+}
+

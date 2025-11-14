@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 32px;
+    background: #be5c5c;
+}
+
+@media (width >= 500px) {
+    body {
+        padding: 0;
+    }
+}
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0 32px;
+  background: linear-gradient(to bottom, #b0aee8, #c288e1);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -880px;
+    left: 50%;
+    translate: -50% 0;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #b0aee8, #c288e1);
+}
+
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 170px 30px 54px;
+    border-radius: 1.25rem;
+    background: #FFFFFF;
+    text-align: center;
+    box-shadow:
+        0 100px 100px rgb(0 0 0 / 10%);
+}
+
+
+
+@media (width >= 500px) {
+    .card { margin: 0; width: 360px; }
+}
+
+.card .logo {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    translate: -50% 0;
+    width: 140px;
+    height: 100px;
+}
+
+.card > h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    margin: 0 0 30px;
+    color: #2a3444;
+}
+
+
+
+
+.card > footer { color: #a1a1a1; }
+
+.card > footer > a { color: #216ce7; }
+
+.form {
+    display: grid;
+    gap: 16px;
+    margin: 0 0 36px;
+}
+
+.form > input,
+.form > button {
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+}
+
+.form > input {
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    color: #11274c;
+}
+
+.form > input::placeholder {
+    color: #cac8c8;
+}
+
+.form > button {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: #452CD5;
+    color: #FFFFFF;
+    border: 0;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}

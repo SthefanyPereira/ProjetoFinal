@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diário de Humor - EvoluIA</title>
+    <link rel="stylesheet" href="css/diario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-wrapper">
+        <div class="screen">
+            <header>Meu Diário & Progresso</header>
+        </div>
+    </div>
+    
+    <div class="screen" role="application" aria-label="Diário de humor - EvoluIA">
+        
+        <nav class="bottom" aria-label="Navegação">
+            <a class="item" href="principal.php">Início</a>
+    <a class="item" href="diario.html">Diário</a>
+    <a class="item" href="plano.html">Recursos Pro</a>
+    <a class="item" href="comunidade.php">Comunidade</a>
+    <a class="item" href="perfil.php">Perfil</a>
+        </nav>
+
+        <main>
+            <div class="cta">
+                <div class="icon">✏️</div>
+                <div style="font-weight:700;color:#234">Registrar Humor de Hoje</div>
+                <button onclick="openModal()">Registrar</button>
+            </div>
+
+            <h3 class="section-title">Seu Progresso & Visão Geral</h3>
+            <div class="top-row">
+                <div class="progress-card">
+                    <div style="font-weight:700;margin-bottom:6px">Seu Humor na Última Semana</div>
+                    <div class="chart-wrap">
+                        <svg viewBox="0 0 300 120" width="100%" height="120" preserveAspectRatio="none" aria-hidden="true">
+                            <defs>
+                                <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                                    <stop offset="0%" stop-color="#c7f0ff" />
+                                    <stop offset="100%" stop-color="#fff" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="0" y="0" width="300" height="120" fill="transparent"/>
+                            <g stroke="#efefef" stroke-width="1">
+                                <line x1="20" y1="20" x2="280" y2="20"></line>
+                                <line x1="20" y1="40" x2="280" y2="40"></line>
+                                <line x1="20" y1="60" x2="280" y2="60"></line>
+                                <line x1="20" y1="80" x2="280" y2="80"></line>
+                            </g>
+                            <path d="M20 90 L60 70 L100 75 L140 62 L180 68 L220 50 L260 20 L280 20 L280 120 L20 120 Z" fill="url(#g1)" opacity="0.9"></path>
+                            <polyline points="20,90 60,70 100,75 140,62 180,68 220,50 260,20" fill="none" stroke="#5a2be6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></polyline>
+                            <g fill="#5a2be6">
+                                <circle cx="20" cy="90" r="5"></circle>
+                                <circle cx="60" cy="70" r="6"></circle>
+                                <circle cx="100" cy="75" r="5"></circle>
+                                <circle cx="140" cy="62" r="5"></circle>
+                                <circle cx="180" cy="68" r="5"></circle>
+                                <circle cx="220" cy="50" r="5"></circle>
+                                <circle cx="260" cy="20" r="6"></circle>
+                            </g>
+                        </svg>
+                        <div class="chart-legend">
+                            <div>Seg  Ter  Qua  Qui  Sex  Sab  Dom</div>
+                        </div>
+                        <div style="margin-top:10px;color:var(--muted);font-size:13px">Sua média de humor subiu <strong>+5%</strong> em relação à semana passada. 😊</div>
+                        <button class="btn-primary" onclick="addEntry()">Adicionar Entrada</button>
+                    </div>
+                </div>
+
+                <div class="progress-metrics-wrapper"> 
+                    <div class="mini-card">
+                        <div class="num">5</div>
+                        <small>Dias Registro<br>Seguidos</small>
+                    </div>
+                    <div class="mini-card">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style="margin-bottom:6px"><path d="M12 2C9 2 4 4 4 8c0 4 4 7 8 12 4-5 8-8 8-12 0-4-5-6-8-6z" fill="#000000"/></svg>
+                        <small>Emoção Predominante<br>este mês: <strong>Calmo</strong></small>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Seu Suporte Profissional</h3>
+            <div class="pro-card">
+                <div class="cal">📅</div>
+                <div class="meta">
+                    <div style="font-weight:800">Próxima Consulta</div>
+                    <small>Data: 28.out (Terça-feira), 16:00h<br>Com: Dr. João Silva (Psicólogo)</small>
+                </div>
+                <button class="join" onclick="joinSession()">Acessar Sala</button>
+            </div>
+
+            <a class="history" href="#">Ver Histórico de Consultas</a>
+
+            <h3 class="section-title">Seus Registros Anteriores</h3>
+            <div class="log">
+                <div class="entry">
+                    <div class="dot">Ontem</div>
+                    <div class="text">
+                        <div style="font-weight:800;color:#119955">Humor: Ótimo! ✔️</div>
+                        <small>Meditação guiada e caminhada. Sem estresse.</small>
+                    </div>
+                </div>
+
+                <div class="entry">
+                    <div class="dot">2d</div>
+                    <div class="text">
+                        <div style="font-weight:800;color:#e04a4a">Humor: Ansioso 😟</div>
+                        <small>Prazo de trabalho. Usei atividade de respiração.</small>
+                    </div>
+                </div>
+                
+                <div class="entry">
+                    <div class="dot">3d</div>
+                    <div class="text">
+                        <div style="font-weight:800;color:#ff9800">Humor: Neutro 😐</div>
+                        <small>Dia normal de trabalho. Tentei respirar fundo 3x.</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+    </div>
+</body>
+</html>
