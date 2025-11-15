@@ -24,7 +24,7 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'adicionar') {
         $_SESSION['usuarios'][] = $novoUsuario;
     }
 
-    header("Location: diario.html");  
+    header("Location: principal.html");  
     exit;
 }
 
