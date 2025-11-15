@@ -62,7 +62,7 @@
 
     <nav class="bottom">
         <div class="item">
-           <a href="principal.php"> Início</a>
+           <a href="principal.html"> Início</a>
         </div>
         <div class="item">
              <a href="diario.html">Diario</a>
@@ -74,7 +74,7 @@
             <a href="comunidade.php"> Comunidade</a>
         </div>
         <div class="item">
-             <a href="perfil.php">Perfil</a>
+             <a href="perfil.html">Perfil</a>
         </div>
     </nav>
 
