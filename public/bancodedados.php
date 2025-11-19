@@ -24,7 +24,7 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'adicionar') {
         $_SESSION['usuarios'][] = $novoUsuario;
     }
 
-    header("Location: principal.html");  
+    header("Location: diario.html");  
     exit;
 }
 
@@ -98,6 +98,14 @@ if (isset($_GET['reset'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuários EvoluIA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    body {
+        background: linear-gradient( #b0aee8, #c288e1) !important;
+    }
+    .card-body {
+        background: #ebc7ffff !important;
+    }
+</style>
 </head>
 <body>
 
